@@ -1,0 +1,60 @@
+name: Release Workflow
+
+on:
+  push:
+    branches:
+      - 'release/*'
+
+env:
+  REGISTRY: meltoz
+  IMAGE_NAME: lethal
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
+
+      - name: Login to Docker Hub
+        uses: docker/login-action@v2
+        with:
+          username: ${{env.REGISTRY}}
+          password: ${{secrets.PASS_DOCKER}}
+
+      - name: Extract version from branch name
+        id: extract_version
+        run: echo "VERSION=${GITHUB_REF#refs/heads/release/}" >> $GITHUB_ENV
+
+      - name: Prepare image
+        uses: docker/metadata-action@9ec57ed1fcdbf14dcef7dfbe97b2010124a938b7
+        with:
+          images: ${{env.REGISTRY}}/${{env.IMAGE_NAME}}
+
+      - name: building image and push
+        uses: docker/build-push-action@v5.0.0
+        with:
+          context: .
+          file: ./Dockerfile
+          push: true
+          tags: ${{env.REGISTRY}}/${{env.IMAGE_NAME}}:${{env.VERSION}}
+
+      - name: Create tag on master branch
+        env:
+          GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
+        run: |
+          git config --global user.email "meltoz@outlook.fr"
+          git config --global user.name "Meltoz"
+          git fetch origin master
+          git checkout master
+          git tag -a "v${{ env.VERSION }}" -m "Release version ${{ env.VERSION }}"
+          git push origin "v${{ env.VERSION }}"
+
+      - name: Delete release branch
+        run: |
+          BRANCH_NAME=${GITHUB_REF#refs/heads/}
+          git push origin --delete $BRANCH_NAME
