@@ -7,7 +7,7 @@ on:
 
 env:
   REGISTRY: meltoz
-  IMAGE_NAME: lethal
+  IMAGE_NAME: greenlife
 
 jobs:
   build-and-push:
