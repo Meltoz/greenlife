@@ -10,4 +10,5 @@ RUN npm run build
 # production environment
 FROM nginx:latest
 RUN mkdir /app
-COPY --from=build /app/build /usr/share/nginx/html
+COPY --from=build /app/dist/starter-angular /app
+COPY ./nginx.conf /etc/nginx/nginx.conf
