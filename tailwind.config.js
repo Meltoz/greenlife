@@ -11,7 +11,12 @@ module.exports = {
         transparent: 'transparent',
         mediumWhite: '#FFFFFF60',
         transparentWhite: '#FFFFFF10',
-        transparentBlack: '#00000050'
+        transparentBlack: '#00000050',
+        tenius: '#EAEACB',
+        sand: '#F5F5DC',
+        forest: '#228B22',
+        sky: '#87CEEB',
+        dirt: '#8B4513'
       }
     },
   },
