@@ -17,6 +17,9 @@ module.exports = {
         forest: '#228B22',
         sky: '#87CEEB',
         dirt: '#8B4513'
+      },
+      fontFamily: {
+        playfair: ['playfair']
       }
     },
   },
