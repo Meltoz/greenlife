@@ -1,0 +1,9 @@
+<article routerLink="/product/{{product.id}}" class="cursor-pointer border-[1px] border-white">
+  <img
+    src="img/products/{{product.image}}"
+  />
+  <div class="flex justify-between mx-2">
+    <h4>{{product.name}}</h4>
+    <p>{{product.price/100 | number:'1.2'}} €</p>
+  </div>
+</article>
