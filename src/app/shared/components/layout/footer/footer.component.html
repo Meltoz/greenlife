@@ -1,0 +1,51 @@
+<footer class="border-t-[1px] border-tenius bg-dirt text-tenius flex">
+  <div class="basis-1/2">
+    <div class="flex items-center m-5 ">
+      <img
+        src="img/logo_v2.svg"
+        class="h-15"
+        alt="logo papillon">
+      <h1 class="text-3xl font-playfair"><span class="font-semibold">Green</span>Life</h1>
+    </div>
+    <div class="ml-9 ">
+      <h4 class="font-playfair text-3xl py-3">Contact</h4>
+      <div class="space-y-3 py-5 font-extralight text-sm">
+        <p>
+          <span class="font-playfair text-base">Email</span>
+          <br/>
+          <a href="mailto:jean.dupont@example.com">jean.dupont&#64;example.com</a>
+        </p>
+        <p>
+          <span class="font-playfair text-base">Phone</span>
+          <br/>
+          +33 6 25 77 81 98
+        </p>
+        <p>
+          <span class="font-playfair text-base">Address</span>
+          <br />
+          1 Rue de l'hippocampe, 75003 Paris
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="basis-1/2 border-l-[1px]">
+    @for(link of links; track link){
+      <p class=" border-b-[1px] text-7xl px-10 py-5">{{ link.name }}</p>
+    }
+    <section class="mt-40 flex justify-around items-center text-sm pb-5" >
+      <p>Copyright 2024 - 2025</p>
+      <p>Author</p>
+      <div class="flex justify-evenly gap-2">
+        <img
+          src="img/sm/instagram.svg"
+          class="h-10"/>
+        <img
+          src="img/sm/facebook.svg"
+          class="h-10"/>
+        <img
+          src="img/sm/twitter.svg"
+          class="h-10"/>
+      </div>
+    </section>
+  </div>
+</footer>

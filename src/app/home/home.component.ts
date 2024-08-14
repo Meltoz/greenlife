@@ -6,6 +6,7 @@ import {toSignal} from "@angular/core/rxjs-interop";
 import {ProductService} from "../core/services/product.service";
 import {Router} from "express";
 import {SortComponent} from "./sort/sort.component";
+import {FooterComponent} from "../shared/components/layout/footer/footer.component";
 
 @Component({
   selector: 'app-home',
@@ -14,7 +15,8 @@ import {SortComponent} from "./sort/sort.component";
     LinkComponent,
     HeaderComponent,
     ProductListComponent,
-    SortComponent
+    SortComponent,
+    FooterComponent
   ],
   templateUrl: './home.component.html',
 })
