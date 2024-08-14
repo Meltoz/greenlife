@@ -1,5 +1,6 @@
 <app-header/>
 <main>
+<!--  HERO   -->
   <section class="grid grid-cols-12 grid-rows-5 mx-9 h-screen">
     <p class="text-3xl col-start-1 col-end-3 row-start-3">Lorem <i>ipsum</i> odor amet, consectetuer <i>adipiscing</i>
       elit.</p>
@@ -9,7 +10,9 @@
       class="col-start-9 col-span-5 row-start-1 row-end-6"
     />
   </section>
-  <section class="bg-tenius rounded-3xl">
+
+<!--  LOREM  -->
+  <section class="bg-tenius rounded-t-3xl">
     <div class="grid grid-cols-12 grid-rows-6 mx-9">
       <div class="col-start-10 col-span-3 row-start-1 row-end-4">
         <h2 class="text-right text-5xl font-playfair my-14">Lorem ipsum</h2>
@@ -29,6 +32,7 @@
     </div>
   </section>
 
+<!--  PRODUCTS  -->
   <section class="bg-dirt text-white">
     <div class="flex justify-between items-center mx-9">
       <div class="flex items-center gap-2 cursor-pointer">
@@ -44,16 +48,7 @@
         <p class="py-5 ">Filtrer <span class="font-extralight text-sm">({{this.totalProducts()}} products)</span></p>
       </div>
       <div class="flex items-center gap-3">
-        <p>Featured</p>
-        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-          <rect x="30" width="30" height="30" transform="rotate(90 30 0)" fill="url(#pattern0_139_55)"/>
-          <defs>
-            <pattern id="pattern0_139_55" patternContentUnits="objectBoundingBox" width="1" height="1">
-              <use xlink:href="#image0_139_55" transform="scale(0.0111111)"/>
-            </pattern>
-            <image id="image0_139_55" width="90" height="90" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAACXBIWXMAAAsTAAALEwEAmpwYAAABYklEQVR4nO3cvUrEUBRF4YyFo+BzK9hYWE3lO1iIDzJVckAQBMFOz2HKLSnFn0KSG91ZH0w7XBabMAPhdh0AAAAAAAB+RXo8rYpdZmRVvFQNl1K/JefEqmJXFfr4Ge6IPSFJm8x4+xya2JOritevQxN7UpnD1fehiT0Zqd+Oz2RiNyDtjzPj9ufYcS89nLQ4jzURm9iWxLKJbUksm9iWxLKJbUksm9iWxLKJbUksm9iWxLKJbUksm9iWxLKJbUksm9iWxLLb4SWdvxf7ouWZVvwYGZ6XPuMqQmfG09JnXMmjI86XPue/Jt5YnR8/7xogMpE9iH+DRLYglkxkC2LJRLYglkxkC2LJRLYglkxkC2LJRLYglkxkC2LJRLYglkxkC2LJLSL3XMfWQmZcc+fdzCQdZQ7FLY5tQh+4KrOBquGG+0gbkPZnY+xx2eMVx+OlsNwdPWtwbeb8fgAAAAAA0K3VOwKtoprXpoSTAAAAAElFTkSuQmCC"/>
-          </defs>
-        </svg>
+        <app-sort />
       </div>
     </div>
 
