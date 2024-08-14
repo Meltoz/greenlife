@@ -19,7 +19,8 @@ module.exports = {
         dirt: '#8B4513'
       },
       fontFamily: {
-        playfair: ['playfair']
+        playfair: ['playfair'],
+        neue: ['Neue-Montreal'],
       }
     },
   },

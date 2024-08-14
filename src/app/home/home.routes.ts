@@ -1,10 +1,10 @@
 export default [{
-  path:'',
+  path: '',
   children: [{
-    path:'',
+    path: '',
     loadComponent: () => import('./home.component').then(x => x.HomeComponent)
-  },{
-    path:'product/:id',
+  }, {
+    path: 'product/:id',
     loadComponent: () => import('./product-detail/product-detail.component').then(x => x.ProductDetailComponent)
   }
   ]

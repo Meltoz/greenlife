@@ -4,9 +4,13 @@
 
 @font-face {
   font-family: 'playfair';
-  src: url('/fonts/Playfair-Italic.ttf') format("truetype"),
+  src: url('/fonts/Playfair-Italic.ttf') format("truetype");
 }
 
+@font-face {
+  font-family: Neue-Montreal;
+  src:url('/fonts/NeueMontreal.otf') format("opentype");
+}
 :root{
   --sand: #F5F5DC;
 }
@@ -14,7 +18,7 @@
 @layer{
 
   body{
-    @apply bg-sand;
+    @apply bg-sand font-neue;
   }
 
   i {
