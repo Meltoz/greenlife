@@ -23,7 +23,7 @@ import {NgClass} from "@angular/common";
       overflow: 'hidden',
     })),
     transition('open <=> closed', [
-      animate('300ms ease-in-out')
+      animate('200ms ease-in-out')
     ]),
   ]),
 ]
@@ -75,6 +75,7 @@ export class SortComponent {
     this.isOpen = false;
     this.sortSelected = selected;
   }
+
   @HostListener('document:click', ['$event'])
   onClickOutside(event: MouseEvent) {
     if (!this.eRef.nativeElement.contains(event.target)) {

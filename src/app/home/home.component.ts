@@ -8,6 +8,7 @@ import {Category} from "../core/models/category";
 import {Product} from "../core/models/product";
 import {forkJoin, map} from "rxjs";
 import {ProductCardComponent} from "../shared/components/layout/product-card/product-card.component";
+import {FilterComponent} from "./filter/filter.component";
 
 @Component({
   selector: 'app-home',
@@ -18,6 +19,7 @@ import {ProductCardComponent} from "../shared/components/layout/product-card/pro
     SortComponent,
     FooterComponent,
     ProductCardComponent,
+    FilterComponent,
   ],
   templateUrl: './home.component.html',
 })

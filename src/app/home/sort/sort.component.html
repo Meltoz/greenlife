@@ -13,7 +13,7 @@
 
 <div
   [@openClose]="isOpen ? 'open' : 'closed'"
-  class="absolute mt-2 p-4 bg-gray-100 border border-gray-300 shadow-md text-black space-y-1"
+  class="absolute mt-2 p-4 bg-tenius border border-gray-300 shadow-md text-black space-y-1"
 >
     @for(option of sortOptions; track option){
       <p (click)="selectOne(option)"

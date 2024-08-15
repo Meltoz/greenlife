@@ -1,9 +1,12 @@
 import {ChangeDetectionStrategy, Component} from '@angular/core';
+import {NgClass} from "@angular/common";
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [],
+  imports: [
+    NgClass
+  ],
   templateUrl: './footer.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })

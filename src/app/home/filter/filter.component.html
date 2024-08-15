@@ -1,1 +1,27 @@
-<p>filter works!</p>
+<div (click)="this.toggleFilter()" class="flex items-center gap-3 cursor-pointer">
+  <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"
+       xmlns:xlink="http://www.w3.org/1999/xlink">
+    <rect width="30" height="30" fill="url(#pattern0_139_57)"/>
+    <defs>
+      <pattern id="pattern0_139_57" patternContentUnits="objectBoundingBox" width="1" height="1">
+        <use xlink:href="#image0_139_57" transform="scale(0.0111111)"/>
+      </pattern>
+      <image id="image0_139_57" width="90" height="90"
+             xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAACXBIWXMAAAsTAAALEwEAmpwYAAAChElEQVR4nO2ZwWoUQRCGB8EEfQPNyUfyIRSF5Dnckwj6SCabBWEvAU26A0EM6MGopH5ybGlmwDVhk1mmu9Ld9X/QsMwO1cU3RTNT1XWEEEIIIYSQeyeE8IDxMxLC10ci/gPgfscl4t/Ha4yfGBH3DvBhdYn4t4yfGMB9vy4acD8YPzE3JfeL8RND0UpQtBIUrQRFK0HRSlC0EhStBEU3IDqEo6118eN/NRRKMnIlChzviLjFuvgifi5y9qTU/JOTI9EQPj0U8QfrYv+T7RZTK9u0aOD09V2SV2S/KC3/LORIVMTPNxD9sbT8K6po92usaMD9LC3/mir6crxo/6e0/CsS7Rbjjw4/Ly3/mo6OvQ2Ojt3S8s9CjkRDONkG/HKE6CVf7yY/wOOdO2Qv4z3T9zFc0f9/grvd/ivQXw7rIF7jJ3ipFbEGVrQSFK0ERStB0UpQ9ADgn19dfXkWwvnjuOLveK2zJLqFCQhKFw18firiD2/pQRzGe6bvY1j0MAHZHzcBOdmespdp0YB/Nb7p419O3Muu6DHzvJUjZH/KXqZFbzgBuZi2l2HRLU1AULbodiYgKFl0SxMQlCy6pQkIShbd0gQEpYtuZQKCGkRrgIwiNHo1nXXRUOrVmBYdFHs1pkVDsVdjWrQo9mo6yxMQwF1o9WqSUePrlyj2aoyLdmq9GtOiodirMS06KPZqTIvW7NV01kVr9WqSUbPoqqBoJShaCYpWgqKVqF00MvdqktGA6FDFW03tIkDRPRTdiAiwonsouhERYEX3UHQjIsCK7qHoARF/fl2GiP/WJUIqj58MwM1uVp17w/iJGaYUs1gZfXW4WcrpRKg8PiGEEEIIIYR0pfIXoPsW2TsgqM8AAAAASUVORK5CYII="/>
+    </defs>
+  </svg>
+  <p class="py-5 ">Filtrer <span class="font-extralight text-sm">(8 products)</span></p>
+</div>
+<div [@openClose]="isOpen ? 'open':'closed'"
+     class="absolute mt-2 p-4 bg-tenius border border-gray-300 shadow-md text-black space-y-1 w-1/5 h-[60%] font-light">
+  <div class="flex justify-between items-center font-extralight">
+    <p class="text-3xl uppercase">category</p>
+    <p class="text-4xl">+</p>
+  </div>
+  <hr class="h-[2px] bg-black" />
+  <div class="flex justify-between items-center font-extralight">
+    <p class="text-3xl uppercase">price</p>
+    <p class="text-4xl">+</p>
+  </div>
+  <hr class="h-[2px] bg-black" />
+</div>
