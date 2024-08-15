@@ -2,6 +2,7 @@ import {Injectable} from '@angular/core';
 import {Product} from "../models/product";
 import {Observable, of} from "rxjs";
 import {Sort} from "../helper/helper";
+import {Category} from "../models/category";
 
 @Injectable({
   providedIn: 'root'
@@ -14,6 +15,7 @@ export class ProductService {
       price: 1990,
       description: 'Un tote bag est toujours pratique peut importe l\'occasion ou le moment',
       image: 'totebag.png',
+      category: Category.food,
       isNew: true
     }, {
       id: 2,
@@ -21,6 +23,7 @@ export class ProductService {
       price: 1990,
       description: 'Un tote bag est toujours pratique peut importe l\'occasion ou le moment',
       image: 'totebag.png',
+      category: Category.food,
       isNew: false
     }, {
       id: 3,
@@ -28,6 +31,7 @@ export class ProductService {
       price: 1990,
       description: 'Un tote bag est toujours pratique peut importe l\'occasion ou le moment',
       image: 'totebag.png',
+      category: Category.skincare,
       isNew: true,
     }, {
       id: 4,
@@ -35,6 +39,7 @@ export class ProductService {
       price: 1990,
       description: 'Un tote bag est toujours pratique peut importe l\'occasion ou le moment',
       image: 'totebag.png',
+      category: Category.skincare,
       isNew: false,
     }, {
       id: 5,
@@ -42,6 +47,7 @@ export class ProductService {
       price: 1990,
       description: 'Un tote bag est toujours pratique peut importe l\'occasion ou le moment',
       image: 'totebag.png',
+      category: Category.hygiene,
       isNew: true,
     }, {
       id: 6,
@@ -49,6 +55,7 @@ export class ProductService {
       price: 1990,
       description: 'Un tote bag est toujours pratique peut importe l\'occasion ou le moment',
       image: 'totebag.png',
+      category: Category.hygiene,
       isNew: false,
     }, {
       id: 7,
@@ -56,6 +63,7 @@ export class ProductService {
       price: 1990,
       description: 'Un tote bag est toujours pratique peut importe l\'occasion ou le moment',
       image: 'totebag.png',
+      category: Category.goodies,
       isNew: true,
     }, {
       id: 8,
@@ -63,11 +71,12 @@ export class ProductService {
       price: 1990,
       description: 'Un tote bag est toujours pratique peut importe l\'occasion ou le moment',
       image: 'totebag.png',
+      category: Category.goodies,
       isNew: false
     },];
 
-  getAll(): Observable<Product[]> {
-    return of(this.products);
+  getAllByCategory(category: Category): Observable<Product[]> {
+    return of(this.products.filter(p => p.category === category));
   }
 
   getById(id: number): Observable<Product> {
