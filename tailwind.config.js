@@ -5,6 +5,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens:{
+        '3xl': '1921px'
+      },
       colors: {
         inherit: 'inherit',
         current: 'currentColor',
