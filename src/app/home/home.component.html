@@ -19,7 +19,8 @@
         <h2 class="text-right text-6xl font-playfair my-14">
           <span class="font-semibold">Green</span><i
           class="font-extralight">Products</i></h2>
-        <p class="text-right text-sm my-20">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin magna nunc, posuere
+        <p class="text-right text-sm my-20">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin magna nunc,
+          posuere
           aliquet ultricies quis,
           euismod eu leo. Donec iaculis velit eu mauris eleifend, eget eleifend mi varius. Donec rutrum lorem non leo
           pretium, nec placerat sapien scelerisque. Nunc enim ligula, imperdiet convallis semper id, sagittis et magna.
@@ -56,7 +57,7 @@
 
         <img src="/img/products/casquette.png" class="h-64 col-start-9"/>
         <img src="/img/products/totebag.png" class="h-80 col-start-10 justify-self-end"/>
-          <img src="/img/products/book.png" class="h-80 col-start-10 xl:mt-4 row-start-2 justify-self-end 3xl:mt-12"/>
+        <img src="/img/products/book.png" class="h-80 col-start-10 xl:mt-4 row-start-2 justify-self-end 3xl:mt-12"/>
 
       </div>
 
@@ -94,10 +95,18 @@
       </div>
     </div>
 
-    @for(category of categories; track category){
-      <h6 class="font-semibold capitalize">{{category}}</h6>
+    <div class="ml-9 pb-48">
+      @for (category of categories; track category) {
+        <h6 class="font-semibold capitalize text-lg mt-12 mb-4">{{ category }}</h6>
 
-    }
+        <div class="flex gap-10 overflow-x-scroll pb-5">
+          @for (products of productsByCategory[category]; track products) {
+            <app-product-card [product]=" products" class="basis-1/6 shrink-0"/>
+          }
+        </div>
+      }
+    </div>
+
   </section>
 </main>
 

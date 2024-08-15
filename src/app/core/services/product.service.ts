@@ -11,26 +11,58 @@ export class ProductService {
   private products: Product[] = [
     {
       id: 1,
-      name: 'Tote Bag',
-      price: 1990,
+      name: 'Bar energétique Greenlife',
+      price: 499,
       description: 'Un tote bag est toujours pratique peut importe l\'occasion ou le moment',
-      image: 'totebag.png',
+      image: 'food.png',
       category: Category.food,
       isNew: true
     }, {
       id: 2,
-      name: 'Tote Bag',
-      price: 1990,
+      name: 'Bar energétique Greenlife',
+      price: 499,
       description: 'Un tote bag est toujours pratique peut importe l\'occasion ou le moment',
-      image: 'totebag.png',
+      image: 'food.png',
       category: Category.food,
       isNew: false
+    },  {
+      id: 9,
+      name: 'Bar energétique Greenlife',
+      price: 499,
+      description: 'Un tote bag est toujours pratique peut importe l\'occasion ou le moment',
+      image: 'food.png',
+      category: Category.food,
+      isNew: true
     }, {
+      id: 10,
+      name: 'Bar energétique Greenlife',
+      price: 499,
+      description: 'Un tote bag est toujours pratique peut importe l\'occasion ou le moment',
+      image: 'food.png',
+      category: Category.food,
+      isNew: false
+    },{
+      id: 11,
+      name: 'Bar energétique Greenlife',
+      price: 499,
+      description: 'Un tote bag est toujours pratique peut importe l\'occasion ou le moment',
+      image: 'food.png',
+      category: Category.food,
+      isNew: false
+    },{
+      id: 12,
+      name: 'Bar energétique Greenlife',
+      price: 499,
+      description: 'Un tote bag est toujours pratique peut importe l\'occasion ou le moment',
+      image: 'food.png',
+      category: Category.food,
+      isNew: false
+    },{
       id: 3,
       name: 'Tote Bag',
       price: 1990,
       description: 'Un tote bag est toujours pratique peut importe l\'occasion ou le moment',
-      image: 'totebag.png',
+      image: 'cream.png',
       category: Category.skincare,
       isNew: true,
     }, {
@@ -38,7 +70,7 @@ export class ProductService {
       name: 'Tote Bag',
       price: 1990,
       description: 'Un tote bag est toujours pratique peut importe l\'occasion ou le moment',
-      image: 'totebag.png',
+      image: 'cream.png',
       category: Category.skincare,
       isNew: false,
     }, {
