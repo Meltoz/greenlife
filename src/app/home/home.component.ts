@@ -22,6 +22,7 @@ import {FilterComponent} from "./filter/filter.component";
     FilterComponent,
   ],
   templateUrl: './home.component.html',
+  styleUrl: './home.component.css',
 })
 export class HomeComponent implements OnInit {
   private productService = inject(ProductService);
