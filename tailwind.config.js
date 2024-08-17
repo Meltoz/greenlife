@@ -15,6 +15,7 @@ module.exports = {
         mediumWhite: '#FFFFFF60',
         transparentWhite: '#FFFFFF10',
         transparentBlack: '#00000050',
+        mediumBlack: '#363432',
         tenius: '#EAEACB',
         sand: '#F5F5DC',
         forest: '#228B22',

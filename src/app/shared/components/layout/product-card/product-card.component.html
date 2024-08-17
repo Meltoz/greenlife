@@ -1,6 +1,9 @@
-<article routerLink="/product/{{product.id}}" class="cursor-pointer">
-  <img
-    src="img/products/{{product.image}}"
-    class="aspect-auto"
-  />
-</article>
+<div class="relative overflow-hidden q shadow-lg cursor-pointer" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()" routerLink="/product/{{product.id}}">
+    <img
+      src="img/products/{{product.image}}"
+      class="object-cover"
+    />
+  <div class="absolute bottom-0 left-7 w-9/12 p-2 bg-mediumBlack  text-white transition-transform transform translate-y-full hover:translate-y-0 rounded-2xl font-playfair " [@slideInOut]="state">
+    <p class="text-center">→ Show product</p>
+  </div>
+</div>

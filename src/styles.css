@@ -18,7 +18,7 @@
 @layer{
 
   body{
-    @apply bg-sand font-neue scroll-smooth;
+    @apply bg-sand font-neue scroll-smooth text-mediumBlack;
   }
 
   i {
