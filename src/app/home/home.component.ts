@@ -9,6 +9,7 @@ import {Product} from "../core/models/product";
 import {forkJoin, map} from "rxjs";
 import {ProductCardComponent} from "../shared/components/layout/product-card/product-card.component";
 import {FilterComponent} from "./filter/filter.component";
+import {ScrollHorizontalDirective} from "../shared/directives/scroll-horizontal.directive";
 
 @Component({
   selector: 'app-home',
@@ -20,6 +21,7 @@ import {FilterComponent} from "./filter/filter.component";
     FooterComponent,
     ProductCardComponent,
     FilterComponent,
+    ScrollHorizontalDirective,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',

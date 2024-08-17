@@ -8,15 +8,19 @@ import {NgClass} from "@angular/common";
     NgClass
   ],
   templateUrl: './footer.component.html',
+  styleUrl: './footer.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class FooterComponent {
 
   protected links = [{
     name: 'Home',
+    href: '#home'
   }, {
     name: 'Products',
+    href: '#greenproducts'
   },{
     name: 'Goodies',
+    href: '#greenGoodies'
   },]
 }

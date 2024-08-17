@@ -78,7 +78,7 @@ export class ProductService {
       name: 'Tote Bag',
       price: 1990,
       description: 'Un tote bag est toujours pratique peut importe l\'occasion ou le moment',
-      image: 'totebag.png',
+      image: 'package-v2.png',
       category: Category.hygiene,
       isNew: true,
     }, {
@@ -86,7 +86,7 @@ export class ProductService {
       name: 'Tote Bag',
       price: 1990,
       description: 'Un tote bag est toujours pratique peut importe l\'occasion ou le moment',
-      image: 'totebag.png',
+      image: 'package-v2.png',
       category: Category.hygiene,
       isNew: false,
     }, {

@@ -22,17 +22,25 @@
         </p>
         <p>
           <span class="font-playfair text-base">Address</span>
-          <br />
+          <br/>
           1 Hippocampe Street, CR0 London
         </p>
       </div>
     </div>
   </div>
-  <div class="basis-1/2 xl:border-l-[1px]">
-    @for(link of links; track link; let i= $index){
-      <p class="border-b-[1px] text-7xl px-10 py-5" [ngClass]="i === 0 ? 'border-t-[1px]':''">{{ link.name }}</p>
-    }
-    <section class="mt-40 flex justify-around items-end xl:items-center text-sm pb-5" >
+  <div class="basis-1/2 xl:border-l-[1px] flex flex-col  xl:border-tenius">
+      @for (link of links; track link; let i = $index) {
+        <div class="relative overflow-hidden  border-b-[1px] text-7xl py-5 px-10 hover-container" [ngClass]="i === 0 ? 'border-t-[1px] border-tenius md:border-t-0':''">
+        <a class="block text-initial max-w-[30%]"
+           [href]="link.href">{{ link.name }}</a>
+          <a class="block absolute top-5 right-full z-10 text-final opacity-0 text-7xl w-[50%]"
+             [href]="link.href">→ {{ link.name }}</a>
+        </div>
+
+
+      }
+
+    <section class="mt-40 flex justify-around items-end xl:items-center text-sm pb-5">
       <p>Copyright 2024 - 2025</p>
       <p>Author</p>
       <div class="flex flex-col xl:flex-row justify-evenly gap-2">

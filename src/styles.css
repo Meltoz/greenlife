@@ -28,5 +28,6 @@
   .btn-primary{
     @apply  border-2 border-black font-playfair text-xl px-3 py-1 uppercase;
   }
+
 }
 

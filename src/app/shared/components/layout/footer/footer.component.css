@@ -1,0 +1,13 @@
+.hover-container:hover .text-initial{
+  transform: translateX(100%);
+  opacity: 0;
+  transition-duration: 200ms;
+  transition-timing-function: ease-in-out;
+}
+
+.hover-container:hover .text-final {
+  transform: translateX(100%);
+  opacity: 1;
+  transition-duration: 200ms;
+  transition-timing-function: ease-in-out;
+}
